@@ -21,6 +21,7 @@ echo "Installing additional tooling..."
 set -e
 pip install awsume
 awsume --install-plugin https://raw.githubusercontent.com/trek10inc/awsume/master/examplePlugin/console.py https://raw.githubusercontent.com/trek10inc/awsume/master/examplePlugin/console.yapsy-plugin
+pip install requests --user
 
 
 echo ""
