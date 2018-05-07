@@ -89,3 +89,7 @@ DEFAULT_USER=$USER
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
 eval "$(direnv hook zsh)"
+
+#AWSume alias to source the AWSume script
+alias awsume=". awsume"
+fpath=(/usr/local/share/zsh/site-functions $fpath)

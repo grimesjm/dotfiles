@@ -15,15 +15,15 @@ brew tap caskroom/cask
 brew tap caskroom/versions
 brew cask
 
-cd "${BASH_SOURCE%/*}" && brew bundle install
-
-brew doctor
+#cd "${BASH_SOURCE%/*}" && brew bundle install
 
 echo "Installing additional tooling..."
 
 pip install awsume
 
 
+echo ""
+echo ""
 echo "The following tools may need additional setup in your bash_profile or zshrc"
 echo "nodenv - https://github.com/nodenv/nodenv"
 echo "rbenv - https://github.com/rbenv/rbenv" 
