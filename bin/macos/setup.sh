@@ -15,7 +15,7 @@ brew tap caskroom/cask
 brew tap caskroom/versions
 brew cask
 
-#cd "${BASH_SOURCE%/*}" && brew bundle install
+cd "${BASH_SOURCE%/*}" && brew bundle install
 
 echo "Installing additional tooling..."
 
