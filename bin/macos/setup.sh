@@ -5,7 +5,6 @@ echo "Setting up your machine..."
 echo "Installing xcode tools..."
 sudo xcode-select --install
 
-set -e
 
 echo "Installing homebrew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -19,7 +18,9 @@ cd "${BASH_SOURCE%/*}" && brew bundle install
 
 echo "Installing additional tooling..."
 
+set -e
 pip install awsume
+awsume --install-plugin https://raw.githubusercontent.com/trek10inc/awsume/master/examplePlugin/console.py https://raw.githubusercontent.com/trek10inc/awsume/master/examplePlugin/console.yapsy-plugin
 
 
 echo ""
