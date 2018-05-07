@@ -84,6 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH=/usr/local/bin/:$PATH
+export GIT_SSH_COMMAND="ssh -i ~/.ssh/vs_id_rsa"
 DEFAULT_USER=$USER
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
