@@ -18,6 +18,6 @@ Contains a bunch of sane defaults that require a reboot, brew file, etc
 settings, extensions, a simple backup script for them
 
 ## TODO:
-Python is annoying, need to clean the paths for that
-Parameterize gitconfig at some point
-GIT_SSH_COMMAND should be removed
+* Python is annoying, need to clean the paths for that
+* Parameterize gitconfig at some point
+* GIT_SSH_COMMAND should be removed
