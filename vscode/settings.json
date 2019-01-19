@@ -1,0 +1,10 @@
+{
+    "window.zoomLevel": 1,
+    "files.autoSave": "onWindowChange",
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "boundary",
+    "editor.wordWrapColumn": 100,
+    "breadcrumbs.enabled": true,
+    "search.showLineNumbers": true,
+    "search.smartCase": true
+}

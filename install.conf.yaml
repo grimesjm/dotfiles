@@ -1,0 +1,36 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+   ~/.vimrc: .vimrc 
+   ~/.zshrc: .zshrc
+   ~/.gitconfig: .gitconfig
+   ~/.spacemacs: .spacemacs
+   ~/.zprofile: .zprofile
+   ~/.zshenv: .zshenv
+   ~/.zshrc: .zshrc
+
+- shell:
+   - 
+     command: "cd bin/macos && ./setup.sh"
+     stdout: true
+   - 
+     command: bin/macos/sane-defaults.sh
+     stdout: true
+   - 
+     command: echo "1" | bin/macos/rust.sh
+     stdout: true
+   - 
+     command: bin/macos/default-to-zsh.sh
+     stdout: true
+   - 
+     command: "cat vscode/extensions.list | xargs -I % code --install-extension %"
+     stdout: true
+   - 
+    command: "cp vscode/keybindings.json ~/Library/Application\\ Support/Code/User/keybindings.json" 
+   -
+    command: "cp vscode/settings.json  ~/Library/Application\\ Support/Code/User/settings.json" 
+
