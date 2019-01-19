@@ -97,7 +97,3 @@ eval "$(direnv hook zsh)"
 alias awsume=". awsume"
 fpath=(/usr/local/share/zsh/site-functions $fpath)
 export PATH="${PATH}:/usr/local/Cellar/python/3.7.1/bin:/usr/local/sbin:/usr/local/bin"
-source ~/.zshrc_clients
-  #eval "$(minishift oc-env)"
-  #export HELM_HOST="$(minishift ip):$(oc get svc/tiller -o jsonpath='{.spec.ports[0].nodePort}' -n kube-system --as=system:admin)"
-  #export MINISHIFT_ADMIN_CONTEXT="default/$(oc config view -o jsonpath='{.contexts[?(@.name=="minishift")].context.cluster}')/system:admin"
