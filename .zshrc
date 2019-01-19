@@ -83,8 +83,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH=/usr/local/bin/:$PATH
+export PATH=/usr/local/bin/:/usr/local/sbin::$PATH
+export PATH=/usr/local/anaconda3/bin:"$PATH"
+export PATH=~/.dotnet/tools/:"$PATH"
 export GIT_SSH_COMMAND="ssh -i ~/.ssh/vs_id_rsa"
+export GOPATH="~/go"
 DEFAULT_USER=$USER
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
@@ -93,5 +96,8 @@ eval "$(direnv hook zsh)"
 #AWSume alias to source the AWSume script
 alias awsume=". awsume"
 fpath=(/usr/local/share/zsh/site-functions $fpath)
-
+export PATH="${PATH}:/usr/local/Cellar/python/3.7.1/bin:/usr/local/sbin:/usr/local/bin"
 source ~/.zshrc_clients
+  #eval "$(minishift oc-env)"
+  #export HELM_HOST="$(minishift ip):$(oc get svc/tiller -o jsonpath='{.spec.ports[0].nodePort}' -n kube-system --as=system:admin)"
+  #export MINISHIFT_ADMIN_CONTEXT="default/$(oc config view -o jsonpath='{.contexts[?(@.name=="minishift")].context.cluster}')/system:admin"
