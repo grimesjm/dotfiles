@@ -10,11 +10,7 @@ echo "Installing homebrew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "Setting up homebrew and installing basic packages"
-brew tap caskroom/cask
-brew tap caskroom/versions
-brew cask
-
-cd "${BASH_SOURCE%/*}" && brew bundle install
+brew bundle install
 
 echo "Installing additional tooling..."
 

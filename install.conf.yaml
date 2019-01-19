@@ -5,8 +5,8 @@
 - clean: ['~']
 
 - link:
-   ~/.oh-my-zsh: .oh-my-zsh
    ~/.vimrc: .vimrc 
+   ~/.vim: .vim
    ~/.zshrc: .zshrc
    ~/.gitconfig: .gitconfig
    ~/.spacemacs: .spacemacs
@@ -34,4 +34,6 @@
     command: "cp vscode/keybindings.json ~/Library/Application\\ Support/Code/User/keybindings.json" 
    -
     command: "cp vscode/settings.json  ~/Library/Application\\ Support/Code/User/settings.json" 
+   -
+    command: "vim  +PlugInstall +qall"
 
