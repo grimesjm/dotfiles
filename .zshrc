@@ -87,7 +87,7 @@ export PATH=/usr/local/bin/:/usr/local/sbin::$PATH
 export PATH=/usr/local/anaconda3/bin:"$PATH"
 export PATH=~/.dotnet/tools/:"$PATH"
 export GIT_SSH_COMMAND="ssh -i ~/.ssh/vs_id_rsa"
-export GOPATH="~/go"
+export GOPATH="$HOME/go"
 DEFAULT_USER=$USER
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"

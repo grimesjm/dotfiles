@@ -15,10 +15,10 @@ brew bundle install
 echo "Installing additional tooling..."
 
 set -e
-pip install awsume
-awsume --install-plugin https://raw.githubusercontent.com/trek10inc/awsume/master/examplePlugin/console.py https://raw.githubusercontent.com/trek10inc/awsume/master/examplePlugin/console.yapsy-plugin
-pip install requests --user
-
+echo "y" | pip install awsume
+echo "y" | awsume --install-plugin https://raw.githubusercontent.com/trek10inc/awsume/master/examplePlugin/console.py https://raw.githubusercontent.com/trek10inc/awsume/master/examplePlugin/console.yapsy-plugin
+echo "y" | pip install requests --user
+go get -u -v github.com/kubernetes-sigs/aws-iam-authenticator/cmd/aws-iam-authenticator
 
 echo ""
 echo ""
