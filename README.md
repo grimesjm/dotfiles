@@ -20,3 +20,4 @@ settings, extensions, a simple backup script for them
 ## TODO:
 Python is annoying, need to clean the paths for that
 Parameterize gitconfig at some point
+GIT_SSH_COMMAND should be removed
