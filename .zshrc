@@ -83,17 +83,22 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH=/usr/local/bin/:/usr/local/sbin::$PATH
-export PATH=/usr/local/anaconda3/bin:"$PATH"
-export PATH=~/.dotnet/tools/:"$PATH"
-export GIT_SSH_COMMAND="ssh -i ~/.ssh/vs_id_rsa"
-export GOPATH="$HOME/go"
 DEFAULT_USER=$USER
+
+export PATH=/usr/local/bin/:/usr/local/sbin::$PATH
+export PATH=~/.dotnet/tools/:"$PATH"
+export GOPATH="$HOME/go"
 eval "$(rbenv init -)"
-eval "$(nodenv init -)"
 eval "$(direnv hook zsh)"
 
 #AWSume alias to source the AWSume script
 alias awsume=". awsume"
 fpath=(/usr/local/share/zsh/site-functions $fpath)
-export PATH="${PATH}:/usr/local/Cellar/python/3.7.1/bin:/usr/local/sbin:/usr/local/bin"
+
+export VOLTA_HOME="$HOME/.volta"
+[ -s "$VOLTA_HOME/load.sh" ] && . "$VOLTA_HOME/load.sh"
+
+export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

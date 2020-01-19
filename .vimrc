@@ -12,6 +12,8 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'hdima/python-syntax'
 Plug 'fatih/vim-go'
 Plug 'pearofducks/ansible-vim'
+Plug 'rust-lang/rust.vim'
+
 call plug#end()
 
 syntax enable

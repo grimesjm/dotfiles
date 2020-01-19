@@ -1,10 +1,25 @@
 {
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "files.autoSave": "onWindowChange",
     "editor.tabSize": 2,
     "editor.renderWhitespace": "boundary",
     "editor.wordWrapColumn": 100,
     "breadcrumbs.enabled": true,
     "search.showLineNumbers": true,
-    "search.smartCase": true
+    "search.smartCase": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "files.associations": {
+        "*.json": "json"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
