@@ -13,6 +13,7 @@
    ~/.zprofile: .zprofile
    ~/.zshenv: .zshenv
    ~/.zshrc: .zshrc
+   ~/.ssh/config: .ssh/config
 
 - shell:
    - 
