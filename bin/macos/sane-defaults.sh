@@ -169,6 +169,9 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bo
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "America/Indiana/Indianapolis" > /dev/null
 
+# Set the clock format on the menu bar
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm:ss"
+
 # Stop iTunes from responding to the keyboard media keys
 #launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
