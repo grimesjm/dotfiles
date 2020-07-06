@@ -125,7 +125,8 @@
 /.rvm
 /.sh_history
 /.sqlite_history
-/.ssh
+/.ssh/*
+!/.ssh/config
 /.ssl
 /.thelongpoll
 /.toot
