@@ -5,27 +5,25 @@ echo "Setting up your machine..."
 echo "Installing xcode tools..."
 sudo xcode-select --install
 
-
 echo "Installing homebrew..."
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+echo -ne '\n'  | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "Setting up homebrew and installing basic packages"
 brew bundle install
 
 echo "Installing additional tooling..."
-curl -sSLf https://get.notionjs.com | bash
-
 set -e
-pyenv install 3.8.1
+volta install node
+volta install yarn
+pyenv install 3.8.1 -s
 pyenv global 3.8.1
-echo "y" | pip install awsume
-echo "y" | awsume --install-plugin https://raw.githubusercontent.com/trek10inc/awsume/master/examplePlugin/console.py https://raw.githubusercontent.com/trek10inc/awsume/master/examplePlugin/console.yapsy-plugin
+pip install --upgrade pip
+echo "y" | AWSUME_SKIP_ALIAS_SETUP=true pip install awsume
 echo "y" | pip install requests --user
-go get -u -v github.com/kubernetes-sigs/aws-iam-authenticator/cmd/aws-iam-authenticator
 
 echo ""
 echo ""
 echo "The following tools may need additional setup in your bash_profile or zshrc"
-echo "rbenv - https://github.com/rbenv/rbenv" 
+echo "rbenv - https://github.com/rbenv/rbenv"
 echo "AWSume - https://github.com/trek10inc/awsume"
 echo "direnv - https://github.com/direnv/direnv"

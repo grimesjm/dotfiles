@@ -16,6 +16,4 @@ Contains a bunch of sane defaults that require a reboot, brew file, etc
 settings, extensions, a simple backup script for them
 
 ## TODO:
-* Parameterize gitconfig at some point
-* GIT_SSH_COMMAND should be removed
-* Restructure everything to match some of the templates out there
+* A way to autoinstall jetbrains extensions would be nice...
