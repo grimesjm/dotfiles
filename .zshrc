@@ -7,7 +7,7 @@ export ZSH="$HOME/.dotfiles/.oh-my-zsh";
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="powerlevel9k/powerlevel9k"
-ZSH_THEME="avit"
+ZSH_THEME="muse"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -85,21 +85,27 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 DEFAULT_USER=$USER
 
-export PATH=/usr/local/bin/:/usr/local/sbin::$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=~/.dotnet/tools/:"$PATH"
+export PATH=$HOME/.service-mesh-hub/bin:$PATH
 export GOPATH="$HOME/go"
 eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
 
-#AWSume alias to source the AWSume script
-alias awsume=". awsume"
 fpath=(/usr/local/share/zsh/site-functions $fpath)
 
-export VOLTA_HOME="$HOME/.volta"
-[ -s "$VOLTA_HOME/load.sh" ] && . "$VOLTA_HOME/load.sh"
 
-export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 export GIT_SSH_COMMAND="ssh -i ~/.ssh/vs_id_rsa"
+
+[ -s "/Users/justin.grimes/.jabba/jabba.sh" ] && source "/Users/justin.grimes/.jabba/jabba.sh"
+export VOLTA_HOME="/Users/justin.grimes/.volta"
+grep --silent "$VOLTA_HOME/bin" <<< $PATH || export PATH="$VOLTA_HOME/bin:$PATH"
+
+
+
+source $HOME/.zshworkshims

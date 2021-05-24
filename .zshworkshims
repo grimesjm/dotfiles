@@ -1,0 +1,14 @@
+awsokta () {
+	unset AWS_ACCESS_KEY_ID
+	unset AWS_SECRET_ACCESS_KEY
+	unset AWS_SESSION_TOKEN
+	unset AWS_SECURITY_TOKEN
+	unset AWS_REGION
+	unset AWS_DEFAULT_REGION
+	unset AWS_PROFILE
+	unset AWS_OKTA_PROFILE
+	unset AWS_OKTA_ASSUMED_ROLE_ARN
+	unset AWS_OKTA_SESSION_EXPIRATION
+	unset AWS_OKTA_ASSUMED_ROLE
+	eval $(aws-okta env $1 -t 8h)
+}
