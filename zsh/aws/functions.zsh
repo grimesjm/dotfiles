@@ -12,3 +12,4 @@ awsokta () {
 	unset AWS_OKTA_ASSUMED_ROLE
 	eval $(aws-okta env $1 -t 8h)
 }
+
