@@ -14,6 +14,7 @@
    ~/.zshenv: .zshenv
    ~/.zshrc: .zshrc
    ~/.zshworkshims: .zshworkshims
+   ~/.ssh/config: .ssh/config
 
 - shell:
    - 

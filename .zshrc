@@ -92,6 +92,19 @@ export GOPATH="$HOME/go"
 eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
 
+#AWSume alias to source the AWSume script
+alias awsume=". awsume"
+#Auto-Complete function for AWSume
+_awsume() {
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts=$(awsumepy --rolesusers)
+    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+    return 0
+}
+
 fpath=(/usr/local/share/zsh/site-functions $fpath)
 
 
@@ -109,3 +122,14 @@ grep --silent "$VOLTA_HOME/bin" <<< $PATH || export PATH="$VOLTA_HOME/bin:$PATH"
 
 
 source $HOME/.zshworkshims
+
+# Use multiple kubeconfig files
+update_kubeconfig () {
+  KUBECONFIG=$HOME/.kube/config
+  for f in $HOME/.kube/config.d/*; do
+      KUBECONFIG=$KUBECONFIG:$f
+  done
+  export KUBECONFIG
+}
+
+update_kubeconfig
