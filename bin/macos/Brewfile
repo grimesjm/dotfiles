@@ -47,7 +47,6 @@ brew "mysql@5.7", link: true
 brew "nmap"
 brew "openapi-generator"
 brew "postgresql"
-brew "pgrouting", args: ["HEAD"]
 brew "osm2pgrouting"
 brew "osmfilter"
 brew "osmosis"
